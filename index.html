@@ -137,11 +137,11 @@ const certificateStyles
     </style>
 </head>
 <body>
-    <div class="timer" id="timer">Time: 10:00</div>
+    <div class="timer" id="timer">Time: 15:00</div>
     <div class="container">
         <div class="header">
             <h1>🐍 Python vs PHP Quiz 🐘</h1>
-            <p>Test your knowledge with 25 randomly selected questions (10 minutes)</p>
+            <p>Test your knowledge with 50 randomly selected questions (15 minutes)</p>
         </div>
 
         <div class="card" id="nameCard">
@@ -433,7 +433,7 @@ let quizStartTime = null;
 let timerInterval = null;
 let userName = '';
 let shuffledQuestions = []; // New: Store shuffled questions
-let quizTimeLimit = 10 * 60; // New: 15 minutes in seconds
+let quizTimeLimit = 15 * 60; // New: 15 minutes in seconds
 let timeRemaining = quizTimeLimit; 
 
 // Initialize quiz
@@ -461,7 +461,7 @@ function startQuiz() {
     document.getElementById('quizCard').classList.remove('hidden');
     
     // Shuffle questions and take first 25
-    shuffledQuestions = shuffleArray(questions).slice(0, 25);
+    shuffledQuestions = shuffleArray(questions).slice(0, 50);
     
     // Initialize quiz state
     currentQuestion = 0;
@@ -713,7 +713,7 @@ function restartQuiz() {
     
     // Reset timer display
     const timerElement = document.getElementById('timer');
-    timerElement.textContent = 'Time: 10:00';
+    timerElement.textContent = 'Time: 15:00';
     timerElement.style.color = '#667eea';
     timerElement.style.fontWeight = 'bold';
     
